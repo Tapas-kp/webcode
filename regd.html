@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+	<input type="text" name="name" id="name">
+	<select id="gender">
+		<option value="">--</option>
+		<option value="male">M</option>
+		<option value="female">F</option>
+	</select>
+	<input type="text" name="email" id="email">
+	<input type="text" name="mobile" id="mobile">
+	<hr>
+	<h1 id="dName">NAME</h1>
+	<h2 id="dGender">GENDER</h2>
+	<h3 id="dEmail">EMAIL</h3>
+	<h4 id="dMobile">MOBILE</h4>
+	<hr>
+	<button onclick="showName()">NAME</button>
+	<button onclick="showGender()">GENDER</button>
+	<button onclick="showEmail()">EMAIL</button>
+	<button onclick="showMobile()">MOBILE</button>
+	<button onclick="resetForm()">RESET FORM</button>
+	<button onclick="resetDisplay()">RESET DISPLAY</button>
+	<script type="text/javascript">
+        let head=document.getElementById("name")
+		function showName() {
+            console.log(head.value)
+			
+		}
+        let bad=document.getElementById("gender")
+		function showGender() {
+			console.log(bad.value)
+		}
+        let cad=document.getElementById("email")
+		function showEmail() {
+			console.log(cad.value)
+		}
+        let dad=document.getElementById("mobile")
+		function showMobile() {
+			console.log(dad.value)
+		}
+        
+		function resetForm() {
+			let head=document.getElementById("name")
+			head.value=""
+
+			let bad=document.getElementById("gender")
+			bad.value=""
+
+			let cad=document.getElementById("email")
+			cad.value=""
+		
+			let dad=document.getElementById("mobile")
+			dad.value=""
+		}
+
+		function resetDisplay() {
+			let head1=document.getElementById("dName")
+			head1.innerText=`NAME ${""}`
+
+			let bad1=document.getElementById("dGender")
+			bad1.innerText=`GENDER ${""}`
+
+			let cad1=document.getElementById("dEmail")
+			cad1.innerText=`EMAIL ${""}`
+			
+			let dad1=document.getElementById("dMobile")
+			dad1.innerText=`MOBILE ${""}`
+		}
+	</script>
+</body>
+</html>
